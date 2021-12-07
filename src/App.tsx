@@ -1,6 +1,8 @@
+import ListProduct from "./packages/components/ListProduct/ListProduct";
+
 const App = () => {
   return (
-    <h1>Hello world</h1>
+    <ListProduct category={'Army Caps'}/>
   );
 }
 
