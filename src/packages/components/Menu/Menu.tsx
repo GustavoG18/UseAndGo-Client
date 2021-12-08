@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 import cart from '../../assets/cart.png';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
 
@@ -46,10 +47,18 @@ const Menu = () => {
       <Menu>
         <img width="191px" height="55px" src={logo} alt="Logo USEANDGO"/>
         <List>
-          <Option>All Products</Option>
-          <Option>Army Caps</Option>
-          <Option>Baseball Caps</Option>
-          <Option>Berets</Option>
+          <Option>
+            <Link to="/">All Products</Link>
+          </Option>
+          <Option>
+            <Link to="/ArmyCaps">Army Caps</Link>
+          </Option>
+          <Option>
+            <Link to="/BaseballCaps">Baseball Caps</Link>
+          </Option>
+          <Option>
+            <Link to="/Berets">Berets</Link>
+          </Option>
         </List>
         <ButtonContainer>
           <Button>Login</Button>

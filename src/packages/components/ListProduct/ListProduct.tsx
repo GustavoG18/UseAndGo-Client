@@ -30,7 +30,7 @@ const ListProduct = ({category}: Props) => {
       })
     }
     fetchProducts();
-  }, []);
+  }, [category]);
 
   return (
     <>
