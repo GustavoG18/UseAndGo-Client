@@ -3,6 +3,7 @@ import axios from 'axios';
 import { CategoryProduct } from '../../common-types/schemas-types';
 import Card from '../Card/Card';
 import styled from 'styled-components';
+import Loader from '../Loader/Loader';
 
 type Props = {
   category: string;
@@ -35,14 +36,15 @@ const ListProduct = ({category}: Props) => {
   return (
     <>
       {
-        products &&
-        <h1>{products[0]?.category}</h1>
-      }
-      {
-        products &&
-        <CardsContainer>
-          {products[0]?.hats?.map((hat) => <Card hat={hat} key={hat.id}/>)}
-        </CardsContainer>
+        !products? <Loader />:
+          <>
+            <h2 style={{ fontFamily: 'Taviraj, serif', fontWeight: '900', marginBottom: '5px' }}>
+              {products[0]?.category}
+            </h2>
+            <CardsContainer>
+              {products[0]?.hats?.map((hat) => <Card hat={hat} key={hat.id}/>)}
+            </CardsContainer>
+          </>
       }
     </>
   );

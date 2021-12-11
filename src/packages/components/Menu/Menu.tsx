@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import logo from '../../assets/logo.png';
 import cart from '../../assets/cart.png';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Menu = () => {
+
+  const [selected, setSelected] = useState(0);
 
   const Menu = styled.div`
     display: flex;
@@ -14,6 +17,8 @@ const Menu = () => {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Taviraj', serif;
+    font-weight: 700;
   `
   const List = styled.ul`
     display: flex;
@@ -45,24 +50,34 @@ const Menu = () => {
   return(
     <>
       <Menu>
-        <img width="191px" height="55px" src={logo} alt="Logo USEANDGO"/>
+        <img width="150px" height="50px" src={logo} alt="Logo USEANDGO"/>
         <List>
-          <Option>
-            <Link to="/">All Products</Link>
+          <Option onClick={() => {
+            setSelected(0)
+          }}>
+            <Link to="/" style={{textDecoration: 'none', color: selected === 0? 'red':'black'}}>All Products</Link>
           </Option>
-          <Option>
-            <Link to="/ArmyCaps">Army Caps</Link>
+          <Option onClick={() => {
+            setSelected(1)
+          }}>
+            <Link to="/ArmyCaps" style={{textDecoration: 'none', color: selected === 1? 'red':'black'}}>Army Caps</Link>
           </Option>
-          <Option>
-            <Link to="/BaseballCaps">Baseball Caps</Link>
+          <Option 
+            onClick={() => {
+              setSelected(2)
+            }}
+          >
+            <Link to="/BaseballCaps" style={{textDecoration: 'none', color: selected === 2? 'red':'black'}}>Baseball Caps</Link>
           </Option>
-          <Option>
-            <Link to="/Berets">Berets</Link>
+          <Option onClick={() => {
+            setSelected(3)
+          }}>
+            <Link to="/Berets" style={{textDecoration: 'none', color: selected === 3? 'red':'black'}}>Berets</Link>
           </Option>
         </List>
         <ButtonContainer>
-          <Button>Login</Button>
-          <img style={{marginRight: '20px'}} width="32px" height="32px" src={cart} alt="cart"/>
+          <Button style={{fontFamily: 'Taviraj', color: 'black', fontWeight: '700'}}>Login</Button>
+          <img style={{marginRight: '20px'}} width="25px" height="25px" src={cart} alt="cart"/>
         </ButtonContainer>
       </Menu>
     </>
