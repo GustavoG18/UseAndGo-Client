@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import ListProduct from '../ListProduct/ListProduct';
-import hat from '../../assets/hatExample.png';
-import lines from '../../assets/lines.svg';
-import CircleCard from '../CircleCard/CircleCard';
+import ListProduct from './ListProduct';
+import hat from '../assets/resources/hatExample.png';
+import lines from '../assets/icons/lines.svg';
+import CircleCard from './CircleCard';
 
 const LandingPage = () => {
   const MainContainer = styled.div`

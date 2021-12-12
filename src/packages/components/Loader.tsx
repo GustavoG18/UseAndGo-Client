@@ -1,7 +1,6 @@
 
 import lottie from 'lottie-web';
 import { useEffect, useRef } from 'react';
-import Container from '../../common-styles/Container';
 
 const Loader = () => {
 
@@ -14,7 +13,7 @@ const Loader = () => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        animationData: require('../../assets/loader.json'),
+        animationData: require('../assets/icons/loader.json'),
       });
     }
   }, [container]);

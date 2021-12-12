@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { CategoryProduct } from '../../common-types/schemas-types';
-import Card from '../Card/Card';
+import { CategoryProduct } from '../common-types/schemas-types';
+import Card from './Card/Card';
 import styled from 'styled-components';
-import Loader from '../Loader/Loader';
+import Loader from './Loader';
 
 type Props = {
   category: string;

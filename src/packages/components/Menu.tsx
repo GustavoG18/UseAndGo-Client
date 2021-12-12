@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import logo from '../../assets/logo.png';
-import cart from '../../assets/cart.png';
+import logo from '../assets/resources/logo.png';
+import cart from '../assets/resources/cart.png';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 

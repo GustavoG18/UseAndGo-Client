@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import Logo from '../../assets/logo.png';
-import facebookLogo from '../../assets/facebookLogo.svg';
-import instagramLogo from '../../assets/instagramLogo.svg';
-import twitterLogo from '../../assets/twitterLogo.svg';
-import youtubeLogo from '../../assets/youtubeLogo.svg';
+import Logo from '../assets/resources/logo.png';
+import facebookLogo from '../assets/icons/facebookLogo.svg';
+import instagramLogo from '../assets/icons/instagramLogo.svg';
+import twitterLogo from '../assets/icons/twitterLogo.svg';
+import youtubeLogo from '../assets/icons/youtubeLogo.svg';
 
 const Footer = () => {
   const Footer = styled.div`
